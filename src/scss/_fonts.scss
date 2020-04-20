@@ -1,14 +1,15 @@
 @font-face {
-    font-family: 'Roboto-Regular',  sans-serif;
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-         url('../fonts/Roboto-Regular.woff') format('woff'); 
-    font-display: swap;
+  font-family: 'Roboto-Regular', sans-serif;
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?pnw1op');
-  src:  url('../fonts/icomoon.eot?pnw1op#iefix') format('embedded-opentype'),
+  src: url('../fonts/icomoon.eot?pnw1op');
+  src: url('../fonts/icomoon.eot?pnw1op#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.ttf?pnw1op') format('truetype'),
     url('../fonts/icomoon.woff?pnw1op') format('woff'),
     url('../fonts/icomoon.svg?pnw1op#icomoon') format('svg');
@@ -17,7 +18,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -35,21 +37,27 @@
 .icon-map-marker:before {
   content: "\f041";
 }
+
 .icon-shopping-cart:before {
   content: "\f07a";
 }
+
 .icon-phone:before {
   content: "\f095";
 }
+
 .icon-bolt:before {
   content: "\f0e7";
 }
+
 .icon-flash:before {
   content: "\f0e7";
 }
+
 .icon-angle-right:before {
   content: "\f105";
 }
+
 .icon-location-arrow:before {
   content: "\f124";
 }

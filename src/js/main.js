@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
   $(".rate-star").rateYo({
     rating: 5,
@@ -10,9 +10,13 @@ $(function(){
     dots: true,
     arrows: false,
     slidesToShow: 4,
-    slidesToScroll: 4 
+    slidesToScroll: 4
   });
 
-  var mixer = mixitup('.products__inner-box');
+  $(window).on("load", function () {
+    if ($('.products__inner-box').length) {
+      var mixer = mixitup('.products__inner-box');
+    }
+  });
 
-}); 
+});

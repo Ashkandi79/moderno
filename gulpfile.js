@@ -93,6 +93,9 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/slick-carousel/slick/slick.css",
+			"node_modules/rateyo/src/jquery.rateyo.css",
+			"node_modules/magnific-popup/dist/magnific-popup.css",
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -109,8 +112,9 @@ gulp.task("script", function () {
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/mixitup/dist/mixitup.js",
+			"node_modules/rateyo/src/jquery.rateyo.js",
 			"node_modules/slick-carousel/slick/slick.js",
-			"node_modules/magnific-popup/dist/jquery.magnific-popup.js"
+			"node_modules/magnific-popup/dist/jquery.magnific-popup.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
