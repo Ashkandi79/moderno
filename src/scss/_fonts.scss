@@ -34,34 +34,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-map-marker:before {
-  content: "\f041";
-}
-
-.icon-shopping-cart:before {
-  content: "\f07a";
-}
-
-.icon-phone:before {
-  content: "\f095";
-}
-
-.icon-bolt:before {
-  content: "\f0e7";
-}
-
-.icon-flash:before {
-  content: "\f0e7";
-}
-
-.icon-angle-right:before {
-  content: "\f105";
-}
-
-.icon-location-arrow:before {
-  content: "\f124";
-}
-
 .icon-search:before {
   content: "\f002";
 }
@@ -82,6 +54,10 @@
   content: "\f07a";
 }
 
+.icon-heart-o:before {
+  content: "\f08a";
+}
+
 .icon-phone:before {
   content: "\f095";
 }
@@ -100,6 +76,10 @@
 
 .icon-unsorted:before {
   content: "\f0dc";
+}
+
+.icon-comment-o:before {
+  content: "\f0e5";
 }
 
 .icon-bolt:before {

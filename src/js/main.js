@@ -21,6 +21,31 @@ $(function () {
     to: 600,
     prefix: '$'
   });
+  //start развернуть items
+  $('.icon-th-list').on('click', function () {
+    $('.product__item').addClass('list');
+    //end развернуть items
+
+    //start добавить/убрать зеленый цвет при клике на кнопки
+    $('.icon-th-list').addClass('active');
+    $('.icon-th-large').removeClass('active');
+    //end добавить/убрать зеленый цвет при клике на кнопки
+  });
+  //start свернуть items
+  $('.icon-th-large').on('click', function () {
+    $('.product__item').removeClass('list');
+    //end свернуть items
+
+    //start добавить/убрать зеленый цвет при клике на кнопки
+    $('.icon-th-large').addClass('active');
+    $('.icon-th-list').removeClass('active');
+    //end добавить/убрать зеленый цвет при клике на кнопки
+  });
+
+
+
+
+
 
   $(window).on("load", function () {
     if ($('.products__inner-box').length) {
