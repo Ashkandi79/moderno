@@ -3,7 +3,6 @@
  @import 'fonts';
 
  // start header
-
  .header__top-inner {
    display: flex;
    justify-content: space-between;
@@ -33,7 +32,8 @@
    background-color: $green;
  }
 
- .header__btn-register {
+ .header__btn-register,
+ .header__btn-logout {
    background-color: $red;
    margin-left: 7px;
  }
@@ -64,6 +64,10 @@
  }
 
  .header__circle {
+   &.active {
+     display: block;
+   }
+   display: none;
    width: 34px;
    height: 34px;
    border-radius: 50%;
@@ -79,15 +83,105 @@
      font-size: 14px;
    }
 
-
    &+.header__circle {
      margin-left: 15px;
+   }
+
+   span {
+     position: absolute;
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 18px;
+     right: -7px;
+     top: -7px;
+     font-size: 11px;
+     color: #fff;
+   }
+ }
+//  start поставить кнопки login register по центру
+ .header__box{
+   display: flex;
+   align-items: center;
+ }
+// end поставить кнопки login register по центру
+
+ .notification {
+   span {
+     background-color: $yellow;
+   }
+ }
+
+ .message {
+   span {
+     background-color: $tomato;
+   }
+ }
+
+ .basket {
+   span {
+     background-color: $green;
+   }
+ }
+
+ .header__btn-login--off {
+   display: none;
+ }
+ .header__btn-logout {
+   display: none;
+   &.header__btn-login--on {
+     display: block;
+   }
+ }
+
+ .user {
+   margin-left: 20px;
+   margin-right: 25px;
+   padding-right: 20px;
+   position: relative;
+  //  start стрелочка справа от user
+   &::before{
+     content: "\f107";
+     position: absolute;
+     font-family: 'icomoon';
+     font-size: 16px;
+     color: #707070;
+     top: 0;
+     right: 0;
+    //  end  стрелочка справа от user
+   }
+   &__inner {
+     display: flex;
+     align-items: center;
+   }
+
+   &__images {
+     margin-right: 15px;
+     width: 34px;
+     height: 34px;
+     overflow: hidden;
+     border-radius: 50%;
+   }
+
+   &__info {
+     font-size: 14px;
+     line-height: 24px;
+   }
+
+   &__name {
+     @include f500;
+     color: #222;
+
+     &__money {
+       color: $green;
+       @include f700;
+     }
    }
  }
 
  // end header
  //start search
-
  .search {
    background-repeat: no-repeat;
    background-size: cover;
@@ -335,7 +429,6 @@
  }
 
  // end product-slider
-
  // start advantages
  .advantages {
    background-color: $bg;
@@ -457,7 +550,6 @@
  }
 
  // end author
-
  // start tutorial
  .tutorial {
    padding: 70px 0px 120px;
@@ -493,7 +585,6 @@
  }
 
  // end tutorial
-
  //start footer
  .footer {
    background-color: $bg;
@@ -674,7 +765,6 @@
  }
 
  //end footer 
-
  //start product page
  .product-page__inner {
    display: flex;
@@ -733,7 +823,6 @@
  }
 
  //  end category
-
  //start price-range 
  .price-range {
    form {
@@ -821,7 +910,6 @@
  }
 
  //end  price-range 
-
  // start aside 
  .product-page__aside {
    .product__item-img {
@@ -1110,6 +1198,6 @@
      }
    }
  }
-
+ 
  //  end page2
  //end product page
