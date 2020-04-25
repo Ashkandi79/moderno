@@ -67,6 +67,7 @@
    &.active {
      display: block;
    }
+
    display: none;
    width: 34px;
    height: 34px;
@@ -83,10 +84,6 @@
      font-size: 14px;
    }
 
-   &+.header__circle {
-     margin-left: 15px;
-   }
-
    span {
      position: absolute;
      width: 18px;
@@ -100,12 +97,14 @@
      color: #fff;
    }
  }
-//  start поставить кнопки login register по центру
- .header__box{
+
+ //  start поставить кнопки login register по центру
+ .header__box {
    display: flex;
    align-items: center;
  }
-// end поставить кнопки login register по центру
+
+ // end поставить кнопки login register по центру
 
  .notification {
    span {
@@ -128,8 +127,10 @@
  .header__btn-login--off {
    display: none;
  }
+
  .header__btn-logout {
    display: none;
+
    &.header__btn-login--on {
      display: block;
    }
@@ -140,8 +141,9 @@
    margin-right: 25px;
    padding-right: 20px;
    position: relative;
-  //  start стрелочка справа от user
-   &::before{
+
+   //  start стрелочка справа от user
+   &::before {
      content: "\f107";
      position: absolute;
      font-family: 'icomoon';
@@ -149,8 +151,9 @@
      color: #707070;
      top: 0;
      right: 0;
-    //  end  стрелочка справа от user
+     //  end  стрелочка справа от user
    }
+
    &__inner {
      display: flex;
      align-items: center;
@@ -172,15 +175,149 @@
    &__name {
      @include f500;
      color: #222;
+   }
 
-     &__money {
-       color: $green;
-       @include f700;
+   &__money {
+     color: $green;
+     @include f700;
+   }
+ }
+
+ .user__menu {
+   left: 20px;
+   border: 0px solid #ccc;
+   position: absolute;
+   background-color: #fff;
+   padding: 0px 20px;
+   width: 158px;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
+   height: 0;
+   overflow: hidden;
+   top: 69px;
+
+   a {
+     font-size: 12px;
+     color: #546e7a;
+     margin-bottom: 15px;
+   }
+ }
+
+ .circle__menu {
+   position: absolute;
+   top: 69px;
+ }
+
+ // start выпадашки
+ .user__box,
+ .basket__box,
+ .message__box,
+ .notification__box {
+   position: relative;
+   height: 90px;
+   margin-top: 40px;
+
+   &:hover {
+     .user__menu {
+       height: auto;
+       border-width: 1px;
+       padding: 20px;
+       overflow: auto;
      }
    }
  }
 
+ .circle__menu {
+   border-top: 1px solid #e0e0e0;
+   top: 62px;
+   right: 0;
+   height: 0;
+   overflow: hidden;
+   transition: all .3s;
+ }
+
+ .basket__box,
+ .message__box,
+ .notification__box {
+   margin-top: 54px;
+   margin-left: 15px;
+
+   &:hover {
+     .circle__menu {
+       overflow: auto;
+       height: auto;
+     }
+   }
+ }
+
+
+ .circle__item {
+   background-color: #fff;
+   border: 1px solid #e0e0e0;
+   border-top: none;
+   padding: 23px;
+   display: flex;
+   align-items: center;
+   width: 269px;
+ }
+
+ .circle__images {
+   margin-right: 15px;
+ }
+
+ .circle__info-name {
+   @include f500;
+   color: $bg;
+ }
+
+ .circle__info-thema {
+   font-size: 12px;
+   color: $green;
+ }
+
+ .circle__info-price {
+   @include f500;
+   color: #000;
+   font-size: 16px;
+ }
+
+ .basket__summ {
+   padding: 16px 17px 12px;
+   border: 1px solid #e0e0e0;
+   border-top: none;
+   background-color: #fff;
+ }
+
+ .basket__title {
+   display: flex;
+   justify-content: space-between;
+   padding-left: 13px;
+   padding-right: 22px;
+   margin-bottom: 15px;
+   @include f700;
+   font-size: 16px;
+   color: $bg;
+ }
+
+ .basket__btn {
+   @include f700;
+   color: #fff;
+   font-size: 14px;
+   padding: 12px 5px;
+   background-color: $green;
+   text-align: center;
+   width: 99px;
+ }
+
+ .basket__btn-checkout {
+   width: 123px;
+   margin-left: 6px;
+   background-color: $red;
+ }
+
+ // end выпадашки
  // end header
+
  //start search
  .search {
    background-repeat: no-repeat;
@@ -1198,6 +1335,6 @@
      }
    }
  }
- 
+
  //  end page2
  //end product page
