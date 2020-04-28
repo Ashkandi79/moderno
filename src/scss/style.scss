@@ -206,6 +206,7 @@
  .circle__menu {
    position: absolute;
    top: 69px;
+   z-index: 1;
  }
 
  // start выпадашки
@@ -357,6 +358,11 @@
 
  .icons-color::before {
    color: $tomato;
+ }
+
+ .header__btn-menu,
+ .menu__btn {
+   display: none;
  }
 
  // end выпадашки
