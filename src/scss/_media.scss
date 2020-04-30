@@ -38,9 +38,10 @@
   .menu__btn {
     display: block;
     width: 30px;
+    cursor: pointer;
 
     div {
-      background-color: #fff;
+      background-color: #000;
       height: 3px;
 
       &+div {
@@ -71,11 +72,14 @@
   }
 }
 
-@media (max-width: 520px) {
-  .header {
-    overflow: hidden;
-  }
+// нижний скрол(((((
+// @media (max-width: 520px) {
+//   .header {
+//     overflow: hidden;
+//   }
 
+// нижний скролл(((((
+@media (max-width: 520px) {
   .header__btn-menu {
     display: block;
   }
@@ -100,17 +104,20 @@
   }
 
   .header__box {
+    // start Mike приехал-уехал за иконку
     transition: all .5s;
+    // end Mike приехал.уехал за иконку
     position: absolute;
     background-color: $grey;
     height: 70px;
     left: 100%;
-    right: -100;
+    right: -100%;
     z-index: 2;
 
     &.active {
       left: 70px;
       right: 90px;
+      z-index: 2;
     }
   }
 
@@ -134,7 +141,9 @@
   .circle__menu {
     top: 52px;
   }
+
 }
+
 
 
 

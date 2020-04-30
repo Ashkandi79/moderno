@@ -50,7 +50,6 @@ $(function () {
     $('.header__box').toggleClass('active');
   });
 
-
   $(window).on("load", function () {
     if ($('.products__inner-box').length) {
       var mixer = mixitup('.products__inner-box');
