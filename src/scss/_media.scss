@@ -135,7 +135,7 @@
     transition: all .5s;
     // end Mike приехал.уехал за иконку
     position: absolute;
-    background-color: $grey;
+    background-color: #fff;
     height: 70px;
     left: 100%;
     right: -100%;
@@ -194,12 +194,19 @@
   .basket__box {
     margin-left: 0;
   }
+
+  .menu__btn {
+    left: 10px;
+  }
 }
 
 @media (max-width: 360px) {
   .user {
-    margin-left: 10px;
     margin-right: 0;
+  }
+
+  .basket {
+    margin-right: 10px;
   }
 
   .header__logo {
