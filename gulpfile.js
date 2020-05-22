@@ -97,6 +97,7 @@ gulp.task("style", function () {
 			"node_modules/rateyo/src/jquery.rateyo.css",
 			"node_modules/magnific-popup/dist/magnific-popup.css",
 			"node_modules/ion-rangeslider/css/ion.rangeSlider.css",
+			"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -117,6 +118,7 @@ gulp.task("script", function () {
 			"node_modules/rateyo/src/jquery.rateyo.js",
 			"node_modules/magnific-popup/dist/jquery.magnific-popup.js",
 			"node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+			"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
