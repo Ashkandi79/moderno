@@ -1348,9 +1348,10 @@
 
  .product-page__content {
    .product__item {
-     max-width: 270px;
+     flex-basis: calc(33.3333% - 30px);
      background-color: #fff;
      transition: all .5s;
+     margin-left: 30px;
    }
 
    .product__item-img {
@@ -1382,8 +1383,9 @@
  .product-page__items {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: flex-start;
    margin-bottom: 30px;
+   margin-left: -30px;
  }
 
  // end items
@@ -1469,6 +1471,7 @@
  .product__item {
    &.list {
      max-width: 100%;
+     flex-basis: 100%;
 
      //start расположить картинку слева,текст справа при клике
      .product__item-img {
@@ -1540,7 +1543,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 16px 0;
+   padding: 16px;
  }
 
  .product-one__images {
@@ -2731,15 +2734,6 @@
    }
  }
 
-
-
-
-
-
- // endwithdrawals
-
-
-
-
+ // end withdrawals
 
  @import 'media';
