@@ -564,6 +564,12 @@
    background-color: $grey;
  }
 
+ .products__wrapper,
+ .product-slider__wrapper {
+   max-width: 1920px;
+   margin: 0 auto;
+ }
+
  .product__inner-btn {
    text-align: center;
    margin-bottom: 60px;
@@ -588,8 +594,14 @@
 
  .products__inner-box {
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-start;
+   margin-left: -30px;
    flex-wrap: wrap;
+ }
+
+ .products .product__item {
+   flex-basis: calc(25% - 30px);
+   margin-left: 30px;
  }
 
  .product__item {

@@ -92,52 +92,60 @@ body {
 .breadcrumbs {
   &__inner {
     padding: 45px 0px 40px;
-  }
+    overflow: hidden;
+    width: 1200px;
 
-  &__list {
-    li {
-      display: inline-block;
-      position: relative;
+    &__list {
+      li {
+        display: inline-block;
+        position: relative;
 
-      &+li {
-        padding-left: 24px;
+        &+li {
+          padding-left: 24px;
 
-        &::before {
-          content: '-';
-          position: absolute;
-          left: 8px;
-          color: $green;
+          &::before {
+            content: '-';
+            position: absolute;
+            left: 8px;
+            color: $green;
+          }
+        }
+
+        &:last-child {
+
+          a,
+          span {
+            color: $bg;
+          }
         }
       }
 
-      &:last-child {
-
-        a,
-        span {
-          color: $bg;
-        }
+      a {
+        color: #b0bec5;
       }
     }
+  }
 
-    a {
-      color: #b0bec5;
+  // start стрелочки на выпадашке аватарки
+  .angel-right {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "\f105";
+      font-family: 'icomoon';
+      position: absolute;
+      left: 0;
+      color: $green;
+      font-size: 14px;
     }
   }
 }
 
-// start стрелочки на выпадашке аватарки
-.angel-right {
-  position: relative;
-  padding-left: 15px;
-
-  &::before {
-    content: "\f105";
-    font-family: 'icomoon';
-    position: absolute;
-    left: 0;
-    color: $green;
-    font-size: 14px;
-  }
+#modal {
+  display: none;
 }
 
-// end стрелочки на выпадашке аватарки
+
+
+//  end стрелочки на выпадашке аватарки
